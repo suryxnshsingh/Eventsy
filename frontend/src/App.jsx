@@ -4,6 +4,7 @@ import './App.css'
 import { Navbar } from './assets/components/navbar'
 import { Signup } from './assets/components/signup'
 import { Signin } from './assets/components/signin'
+import { Dashboard } from './assets/components/dashboard'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
+          <Route path = '/' element = {<Dashboard/>}></Route>
           <Route path = '/signup' element = {<Signup/>}></Route>
           <Route path = '/signin' element = {<Signin/>}></Route>
         </Routes>
