@@ -6,7 +6,7 @@ import { Signin } from './assets/components/forms/signin'
 import { Dashboard } from './assets/components/dashboard'
 import { Profile } from './assets/components/profile/profile'
 import { Navbar } from './assets/components/nav/navbar'
-
+import { AboutUs } from './assets/components/about/aboutus'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,6 +21,7 @@ function App() {
           <Route path = '/signup' element = {<Signup/>}></Route>
           <Route path = '/signin' element = {<Signin/>}></Route>
           <Route path = '/profile' element = {<Profile />} />
+          <Route path= '/aboutus' element = {<AboutUs />} />
         </Routes>
         </main>
       </BrowserRouter>
