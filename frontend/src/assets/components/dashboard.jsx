@@ -1,5 +1,5 @@
 export function Dashboard(){
-    return <div style={{background : 'khaki'}}>
-         
+    return <div>
+         Welcome to Eventsy
     </div>
 }
