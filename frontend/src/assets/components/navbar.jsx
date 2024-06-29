@@ -10,7 +10,9 @@ export function Navbar(){
         color : "white",
         padding : 20
         }}>
-        <div>EVENTSY</div>
+        <div onClick={()=>{
+            navigate('/')
+        }}>EVENTSY</div>
 
         <div style={{display : "flex", justifyContent : "center"}}>
             <div><button onClick={()=>{

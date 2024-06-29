@@ -1,5 +1,5 @@
 export function Dashboard(){
-    return <div>
-        dashboard
+    return <div style={{background : 'khaki'}}>
+         
     </div>
 }

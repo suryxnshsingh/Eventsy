@@ -10,7 +10,8 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div style={{background : 'khaki'}}>
+
       <BrowserRouter>
         <Navbar/>
         <Routes>
@@ -19,7 +20,8 @@ function App() {
           <Route path = '/signin' element = {<Signin/>}></Route>
         </Routes>
       </BrowserRouter>
-    </>
+      
+    </div>
   )
 }
 
