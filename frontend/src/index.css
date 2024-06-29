@@ -9,10 +9,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     background: url('./assets/bg.png') no-repeat;
-    background-size: center;
+    background-size: cover;
     background-position: center;
 }

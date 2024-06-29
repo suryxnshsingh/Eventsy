@@ -12,7 +12,7 @@ export function Signin(){
     const handleSubmit = async (event) => {
         event.preventDefault();
             try {
-            const response = await axios.post('/auth/signin', {
+            const response = await axios.post('http://localhost:3000/auth/signin', {
                 email,
                 password,
             });
