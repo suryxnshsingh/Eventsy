@@ -9,7 +9,7 @@ export function AboutUs() {
     <h1>About Us</h1>
     <br></br>
     <div className="wrapperA">
-      <div className="card">
+      <div className="cardAU">
         <img
           src={sury}
           alt="Suryansh smiling"
@@ -19,7 +19,7 @@ export function AboutUs() {
         <br></br>
         <div className="info">
           <h2>Suryansh Singh</h2>
-          <p>CEO, CTO, COO, CeverythingO <br></br>at Eventsy Tech. Pvt. Ltd. <br></br>MalwaMill, Indore</p>
+          <p>CEO, CTO, COO, CeverythingO <br></br><br></br>@ Eventsy Pvt. Ltd. <br></br>MalwaMill, Indore</p>
           <br></br>
           <div className="social-links">
             <a href="https://x.com/suryxnshsingh" target="_blank" rel="noopener noreferrer">

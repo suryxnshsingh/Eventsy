@@ -14,7 +14,7 @@ const Footer = () => {
                         <li>Contact Us</li>
                         <li>Privacy Policy</li>
                         <li>Terms of use</li>
-                        <li>Copyright</li>
+                        <li>&copy;Copyright</li>
                     </ul>
                 </div>
                 <div className="column">
@@ -34,6 +34,7 @@ const Footer = () => {
                         <li>MalwaMill, Indore</li>
                     </ul>
                 </div>
+
         </footer>
     );
 };
