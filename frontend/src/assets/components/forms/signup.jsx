@@ -20,7 +20,7 @@ export function Signup(){
                 password,
             });
             console.log('Registered successfully:', response.data);
-            // Handle successful registration (e.g., redirect to login page, show a success message)
+            //add shit here
             } catch (error) {
             console.error('Error registering:', error);
         }

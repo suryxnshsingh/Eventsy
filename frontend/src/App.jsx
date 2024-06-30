@@ -7,6 +7,7 @@ import { Dashboard } from './assets/components/dashboard'
 import { Profile } from './assets/components/profile/profile'
 import { Navbar } from './assets/components/nav/navbar'
 import { AboutUs } from './assets/components/about/aboutus'
+import { WhyEventsy } from './assets/components/whyEventsy/whyEvensy'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -22,6 +23,7 @@ function App() {
           <Route path = '/signin' element = {<Signin/>}></Route>
           <Route path = '/profile' element = {<Profile />} />
           <Route path= '/aboutus' element = {<AboutUs />} />
+          <Route path= '/whyeventsy' element = {<WhyEventsy/>} />
         </Routes>
         </main>
       </BrowserRouter>

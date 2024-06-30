@@ -7,8 +7,8 @@ import sury from './sury.png'
 export function AboutUs() {
   return (<div>
     <h1>About Us</h1>
-    <div className="wrapper">
-      
+    <br></br>
+    <div className="wrapperA">
       <div className="card">
         <img
           src={sury}
@@ -19,7 +19,7 @@ export function AboutUs() {
         <br></br>
         <div className="info">
           <h2>Suryansh Singh</h2>
-          <p>CEO, CTO, COO, CeverythingO at Eventsy Pvt. Ltd. Malwa Mill, Indore</p>
+          <p>CEO, CTO, COO, CeverythingO <br></br>at Eventsy Tech. Pvt. Ltd. <br></br>MalwaMill, Indore</p>
           <br></br>
           <div className="social-links">
             <a href="https://x.com/suryxnshsingh" target="_blank" rel="noopener noreferrer">
@@ -54,7 +54,7 @@ export function AboutUs() {
                     <br></br>
                     <h3>Backend</h3>
                     <ul>
-                        <li><b>Node.js::</b> A JavaScript runtime built on Chrome's V8 engine.</li>
+                        <li><b>Node.js:</b> A JavaScript runtime built on Chrome's V8 engine.</li>
                         <li><b>Express.js:</b> A fast, unopinionated, minimalist web framework for Node.js.</li>
                         <li><b>MongoDB:</b> A NoSQL database for storing event data and user information.</li>
                         <li><b>jsonwebtoken: </b> A library for generating and verifying JSON Web Tokens (JWT) for authentication.</li>

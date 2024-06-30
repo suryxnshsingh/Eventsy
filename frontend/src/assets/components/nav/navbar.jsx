@@ -7,13 +7,12 @@ export function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-section logo" >
-        <h1 onClick={()=>{useNavigate('/')}} >Eventsy</h1>
-      </div>
-      <div className="navbar-section nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/events">Events</Link>
+      <Link to="/"><h1>Eventsy</h1></Link>
       </div>
       <div className="navbar-section user-actions">
+        <Link to="/events">Events</Link>
+        <Link to="/whyeventsy">Why Eventsy</Link>
+        <Link to="/aboutus">About Us</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/signin">Login</Link>
         <Link to="/signup">Register</Link>

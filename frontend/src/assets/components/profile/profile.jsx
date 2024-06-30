@@ -1,5 +1,5 @@
 import React from 'react';
-import './profile.css'; // Import the CSS file
+import './profile.css';
 
 export function Profile() {
   return (
@@ -11,10 +11,10 @@ export function Profile() {
             alt="User Avatar"
             className="profile-avatar"
           />
-          <h2 className="profile-username">John Doe</h2>
+          <h2 className="profile-username">Bruce Wayne</h2>
         </div>
         <div className="profile-details">
-          <p><strong>Email:</strong> johndoe@example.com</p>
+          <p><strong>Email:</strong> batman@wayne.com</p>
           <p><strong>Member since:</strong> January 2024</p>
         </div>
         <div className="profile-events">
@@ -23,7 +23,7 @@ export function Profile() {
             <li>Event 1</li>
             <li>Event 2</li>
             <li>Event 3</li>
-            <li>Event</li>
+            <li>Event 4</li>
           </ul>
         </div>
       </div>
