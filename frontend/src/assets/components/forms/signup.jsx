@@ -4,12 +4,13 @@ import { FaKey } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useState } from 'react';
 import axios from 'axios';
-
+import { useNavigate } from "react-router-dom";
 
 export function Signup(){
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -20,6 +21,7 @@ export function Signup(){
                 password,
             });
             console.log('Registered successfully:', response.data);
+            navigate('/signin');
             //add shit here
             } catch (error) {
             console.error('Error registering:', error);
@@ -42,6 +44,7 @@ export function Signup(){
                 <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                 <FaKey className="icon"/>
             </div>
+            <br></br>
 
             <button type="submit">Create Account</button>
 

@@ -8,8 +8,7 @@ import { Profile } from './assets/components/profile/profile'
 import { Navbar } from './assets/components/nav/navbar'
 import { AboutUs } from './assets/components/about/aboutus'
 import { WhyEventsy } from './assets/components/whyEventsy/whyEventsy'
-import { Events } from './assets/components/event/events'
-
+import { Events } from './assets/components/events/events'
 
 
 function App() {
@@ -28,8 +27,7 @@ function App() {
           <Route path = '/profile' element = {<Profile />} />
           <Route path = '/aboutus' element = {<AboutUs />} />
           <Route path = '/whyeventsy' element = {<WhyEventsy/>} />
-          <Route path= "/events" component={<Events/>} />
-
+          <Route path = '/events' element = {<Events/>} />
         </Routes>
         </main>
       </BrowserRouter>

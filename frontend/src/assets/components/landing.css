@@ -12,7 +12,7 @@
     width: 100%;
     max-width: 420px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 44, 156, 0.4);
     backdrop-filter: blur(30px);
     color: #fff;
     border-radius: 10px;
@@ -65,13 +65,24 @@
     padding: 10px 20px;
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: #ff2c9c;
     background-color: transparent;
     border: solid;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(30px);
+    transition-duration: 0.4s;
+}
+.cta-button:hover {
+    background-color: #ff2c9c;
+    opacity: 01;
+    color: #fff;
+
+    .landButton{
+        color: #fff;
+        opacity: 1;
+    }
 }
   
 .footer-cta .cta-button {
@@ -87,6 +98,7 @@
     
 }
 
+
 .card-icon{
     font-size: 30px;
 }
@@ -97,8 +109,9 @@
     justify-content: center;
     position: relative;
     top: 20%;
-    left: 30%;
+    left: 37%;
     margin: 0;
+    color : #ff2c9c;
 
 }
 
@@ -109,4 +122,12 @@
 .limg{
     width: 525px;
     margin-inline: 150px;
+}
+
+.eventsyLandingH {
+    color : #ff2c9c;
+}
+
+.landButton{
+    color : #fff;
 }

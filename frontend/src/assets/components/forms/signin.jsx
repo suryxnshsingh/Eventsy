@@ -4,10 +4,12 @@ import { MdEmail } from "react-icons/md";
 import { FaKey } from "react-icons/fa";
 import axios from 'axios';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function Signin(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -17,6 +19,7 @@ export function Signin(){
                 password,
             });
             console.log('Logged in successfully:', response.data);
+            navigate('/events');
             //add shit here
             } catch (error) {
             console.error('Error logging in:', error);
@@ -35,9 +38,10 @@ export function Signin(){
                 <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                 <FaKey className="icon"/>
             </div>
+            <br></br>
             <div className="remember">
                 <label><input type="checkbox" />Remember me</label>
-                <a href="#">Forgot Password</a>
+                <a href="https://media1.tenor.com/m/e-un8UrwpfwAAAAd/bakchodi-mat-kar-laude-cid-meme.gif" target="_blank">Forgot Password</a>
             </div>
 
             <button type="submit">Login</button>

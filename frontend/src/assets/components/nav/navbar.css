@@ -38,7 +38,7 @@
   
   .navbar-section.nav-links a:hover,
   .navbar-section.user-actions a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #00bfff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ff2c9c;
   }
   

@@ -27,7 +27,7 @@ const signin = async (req, res) => {
             })
         }
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' })
-        res.json({ token });
+        res.cookie('access_token', token, {httpOnly:true, expiresIn : '1h'}).status(200).json({ token });
     } catch (error){
         res.status(500).json ({
             msg : "Server Error"

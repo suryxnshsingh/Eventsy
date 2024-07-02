@@ -1,16 +1,18 @@
 import React from 'react';
 import './profile.css';
+import profImg from './profile.png'
 
 export function Profile() {
   return (
-    <div className="wrapper">
+    <div className="wrapperP">
       <div className="profile-card">
         <div className="profile-header">
           <img
-            src="https://via.placeholder.com/150"
+            src={profImg}
             alt="User Avatar"
             className="profile-avatar"
           />
+          <br></br>
           <h2 className="profile-username">Bruce Wayne</h2>
         </div>
         <div className="profile-details">
