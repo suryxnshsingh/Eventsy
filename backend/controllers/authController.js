@@ -1,6 +1,5 @@
 const User = require('../models/User')
 const Event = require('../models/Event')
-
 const jwt = require('jsonwebtoken')
 
 const signup = async (req,res) =>{
@@ -27,7 +26,6 @@ const signin = async (req, res) => {
             })
         }
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' })
-        res.cookie('access_token', token, {httpOnly:true, expiresIn : '1h'}).status(200).json({ token });
     } catch (error){
         res.status(500).json ({
             msg : "Server Error"
