@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
+import './event.css';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
@@ -8,8 +9,11 @@ const EventList = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/events');
-        setEvents(response.data.events);
+        const res = await axios.get('http://localhost:3000/events');
+        setEvents(res.data);
+
+        console.log('events:', events);
+
       } catch (error) {
         console.error('Error fetching events:', error);
       }
@@ -20,14 +24,13 @@ const EventList = () => {
 
   return (
     <div>
-      <h2>Events List</h2>
+      <h1>ALL EVENTS</h1>
       <div className="event-list">
         {events.map(event => (
-          <EventCard key={event.id} event={event} />
+          <EventCard key={event._id} event={event} />
         ))}
       </div>
     </div>
-    
   );
 };
 

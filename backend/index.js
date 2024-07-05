@@ -5,9 +5,11 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoute');
 const eventRoutes = require('./routes/EventRoute');
 const userRoutes = require('./routes/UserRoute');
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const connectDB = async () => {
     try {

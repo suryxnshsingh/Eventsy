@@ -21,6 +21,7 @@ export function AboutUs() {
           <h2>Suryansh Singh</h2>
           <p>CEO, CTO, COO, CeverythingO <br></br><br></br>@ Eventsy Pvt. Ltd. <br></br>MalwaMill, Indore</p>
           <br></br>
+          <p>Connect here :</p>
           <div className="social-links">
             <a href="https://x.com/suryxnshsingh" target="_blank" rel="noopener noreferrer">
               <FaTwitter />

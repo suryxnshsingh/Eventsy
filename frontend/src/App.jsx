@@ -9,7 +9,7 @@ import { Profile } from './assets/components/profile/profile'
 import { Navbar } from './assets/components/nav/navbar'
 import { AboutUs } from './assets/components/about/aboutus'
 import { WhyEventsy } from './assets/components/whyEventsy/whyEventsy'
-import { Events } from './assets/components/events/events'
+import Events from './assets/components/events/Events'
 
 
 
