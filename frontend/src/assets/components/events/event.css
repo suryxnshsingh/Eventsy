@@ -1,14 +1,118 @@
 .event-list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 15px;
 }
 
 .event-card{
     width: 100%;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 44, 156, .4);
     backdrop-filter: blur(30px);
     color: #fff;
     border-radius: 10px;
     padding: 20px 20px;
+}
+
+.event-card:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.2s;
+}
+
+.priceTag{
+    background: rgba(255, 255, 255, 0.1);
+    color: #ff2c9c;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+.cardh2{
+    margin-bottom: 3px;
+}
+
+.plus{
+    font-size: 100px;
+    text-align: center;
+}
+
+.plusDiv{
+    background: transparent;
+    backdrop-filter: blur(30px);
+    color: #fff;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin-left: 200px;
+    margin-top: 40px;
+}
+
+.plusDiv:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.3s;
+}
+.Discover{
+    border: 2px solid rgba(255, 44, 156, .4);
+    cursor: pointer;
+    padding-left: 4px;
+    border-radius: 25px;
+    width: 210px;
+    bottom : 1px;
+}
+.Discover{
+    border: 2px solid rgba(255, 44, 156, .4);
+    cursor: pointer;
+    padding-left: 4px;
+    border-radius: 20px;
+    width: 210px;
+    bottom : 2px;
+    font-size: 20px;
+    background: transparent;
+}
+.Discover:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.Discover2{
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 8px;
+    border: 2px solid rgba(255, 44, 156, .4);
+    background: rgba(255, 44, 156, .2);
+    color: white;
+}
+.Discover2:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.details{
+    width: 60%;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    color: #fff;
+    border-radius: 15px;
+
+    font-size: 20px;
+    margin-block: 0;
+    margin-inline: auto;
+}
+.EBanner{
+    border-radius: 20px;
+    width: 850px;
+}
+
+.iconD{
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top : 5px;
+    color: #ff2c9c;
+
+}
+
+.color {
+
+    color: #ff2c9c;
 }

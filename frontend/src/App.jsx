@@ -10,7 +10,7 @@ import { Navbar } from './assets/components/nav/navbar'
 import { AboutUs } from './assets/components/about/aboutus'
 import { WhyEventsy } from './assets/components/whyEventsy/whyEventsy'
 import Events from './assets/components/events/Events'
-
+import EventDetail from './assets/components/events/eventDetail'
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
             <Route path = '/aboutus' element = {<AboutUs />} />
             <Route path = '/whyeventsy' element = {<WhyEventsy/>} />
             <Route path = '/events' element = {<Events/>} />
+            <Route path = "/events/:id" element={<EventDetail />} />
           </Routes>
           </main>
         </BrowserRouter>

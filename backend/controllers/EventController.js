@@ -1,14 +1,14 @@
 const Event = require ('../models/Event')
 
 const createEvent = async (req,res)=>{
-    const {title, description, date} = req.body;
+    const {title, description, date, location, entry} = req.body;
     try{
-        const event = new Event({ title, description, date, creator : req.user._id})
+        const event = new Event({ title, description, date, location, entry, creator : req.user._id})
         await event.save();
         res.status(201).json({event})
     } catch(error){
         res.status(500).json({
-            msg : "Server Error"
+            msg : "Server Error3"
         })
     }
 }

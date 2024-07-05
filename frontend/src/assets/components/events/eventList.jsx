@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
+import { FaPlusCircle } from "react-icons/fa";
 import './event.css';
 
 const EventList = () => {
@@ -12,8 +13,6 @@ const EventList = () => {
         const res = await axios.get('http://localhost:3000/events');
         setEvents(res.data);
 
-        console.log('events:', events);
-
       } catch (error) {
         console.error('Error fetching events:', error);
       }
@@ -24,11 +23,14 @@ const EventList = () => {
 
   return (
     <div>
-      <h1>ALL EVENTS</h1>
+      <h1 className='lisH1'>All Events</h1>
       <div className="event-list">
         {events.map(event => (
           <EventCard key={event._id} event={event} />
         ))}
+        <div className="plusDiv" onClick={()=>{navigate(`http://localhost:3000/events/${events._id}`)}}>
+          <FaPlusCircle className='plus'/>
+        </div>
       </div>
     </div>
   );

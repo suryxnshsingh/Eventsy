@@ -5,7 +5,7 @@ import { FaUsers, FaChartLine, FaShieldAlt, FaHandsHelping, FaRocket, FaTools } 
 export function WhyEventsy() {
   return (
     <div className="why-eventsy">
-      <h1>Why Eventsy?</h1>
+      <h1>Why <a className='eventsyLandingH'>Eventsy?</a></h1>
       <div className="features-grid">
         <div className="cardDes feature-card">
           <FaUsers className="icon" />
