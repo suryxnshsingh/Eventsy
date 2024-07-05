@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
+import { AuthProvider } from './contexts/authContext'
 import './App.css'
 import { Signup } from './assets/components/forms/signup'
 import { Signin } from './assets/components/forms/signin'
@@ -8,7 +9,7 @@ import { Profile } from './assets/components/profile/profile'
 import { Navbar } from './assets/components/nav/navbar'
 import { AboutUs } from './assets/components/about/aboutus'
 import { WhyEventsy } from './assets/components/whyEventsy/whyEventsy'
-import { Events } from './assets/components/events/events'
+import { Events } from './assets/components/events/Events'
 
 
 function App() {
@@ -16,22 +17,24 @@ function App() {
 
   return (
     <div>
-     <BrowserRouter>
-        <Navbar/>
-        <main style={{ padding: '30px' }}>
-        <Routes>
-          <Route path = '/' element = {<Dashboard/>}></Route>
-          <Route path = '/profile' element={<Profile/>}></Route>
-          <Route path = '/signup' element = {<Signup/>}></Route>
-          <Route path = '/signin' element = {<Signin/>}></Route>
-          <Route path = '/profile' element = {<Profile />} />
-          <Route path = '/aboutus' element = {<AboutUs />} />
-          <Route path = '/whyeventsy' element = {<WhyEventsy/>} />
-          <Route path = '/events' element = {<Events/>} />
-        </Routes>
-        </main>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Navbar/>
+          <main style={{ padding: '30px' }}>
+          <Routes>
+            <Route path = '/' element = {<Dashboard/>}></Route>
+            <Route path = '/profile' element={<Profile/>}></Route>
+            <Route path = '/signup' element = {<Signup/>}></Route>
+            <Route path = '/signin' element = {<Signin/>}></Route>
+            <Route path = '/profile' element = {<Profile />} />
+            <Route path = '/aboutus' element = {<AboutUs />} />
+            <Route path = '/whyeventsy' element = {<WhyEventsy/>} />
+            <Route path = '/events' element = {<Events/>} />
 
+          </Routes>
+          </main>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   )
 }
