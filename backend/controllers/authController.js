@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const Event = require('../models/Event')
+
 const jwt = require('jsonwebtoken')
 
 const signup = async (req,res) =>{
@@ -26,6 +27,7 @@ const signin = async (req, res) => {
             })
         }
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' })
+        res.json({ token });
     } catch (error){
         res.status(500).json ({
             msg : "Server Error"
