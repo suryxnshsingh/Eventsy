@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaLocationDot } from "react-icons/fa6";
 import { BsCalendarDateFill } from "react-icons/bs";
+import { FaUser } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import './event.css'
 
@@ -10,6 +11,8 @@ const EventCard = ({ event }) => {
   return (
     <div className="event-card" onClick={()=>{navigate(`/events/${event._id}`)}}>
       <h2 className='cardh2'>{event.title}</h2>
+      <br></br>
+      <p><FaUser /> {event.creator.username}</p>
       <p><FaLocationDot /> {event.location}</p>
       <p><BsCalendarDateFill /> {event.date}</p>
       <br></br>

@@ -19,7 +19,11 @@ export function Signin(){
                 password,
             });
             console.log('Logged in successfully:', response.data);
-            navigate('/events');
+            const { token } = response.data;
+            if (token) {
+                localStorage.setItem('token', token); 
+                navigate('/events');
+            }
             //add shit here
             } catch (error) {
             console.error('Error logging in:', error);
@@ -29,7 +33,7 @@ export function Signin(){
 
     return <div className="wrapper">
         <form onSubmit={handleSubmit}>
-            <h1>Welcome Back</h1>
+            <h1>Welcome <a className='eventsyLandingH'>Back</a></h1>
             <div className="input-box">
                 <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 <MdEmail className="icon"/>

@@ -23,14 +23,11 @@ const EventList = () => {
 
   return (
     <div>
-      <h1 className='lisH1'>All Events</h1>
+      <h1 className='lisH1'>All <a className='color'>Events</a></h1>
       <div className="event-list">
         {events.map(event => (
           <EventCard key={event._id} event={event} />
         ))}
-        <div className="plusDiv" onClick={()=>{navigate(`http://localhost:3000/events/${events._id}`)}}>
-          <FaPlusCircle className='plus'/>
-        </div>
       </div>
     </div>
   );

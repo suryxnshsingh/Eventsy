@@ -21,8 +21,12 @@ export function Signup(){
                 password,
             });
             console.log('Registered successfully:', response.data);
-            navigate('/signin');
-            //add shit here
+            const { token } = response.data;
+            if (token) {
+                localStorage.setItem('token', token); 
+                navigate('/events');
+            }
+
             } catch (error) {
             console.error('Error registering:', error);
         }
@@ -30,7 +34,7 @@ export function Signup(){
 
     return <div className="wrapper">
         <form onSubmit={handleSubmit}>
-            <h1>Create Account</h1>
+            <h1>Create <a className='eventsyLandingH'>Account</a></h1>
             <div className="input-box">
                 <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 <MdEmail className="icon"/>

@@ -6,7 +6,7 @@ import sury from './sury.png'
 
 export function AboutUs() {
   return (<div>
-    <h1>About Us</h1>
+    <h1>About <a className='color'>Us</a></h1>
     <br></br>
     <div className="wrapperA">
       <div className="cardAU">
