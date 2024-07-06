@@ -3,6 +3,6 @@ import EventForm from "./eventForm";
 
 export default function Events() {
     return <div>
-        <EventList/>
+        yoyo
     </div>;
 }

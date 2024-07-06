@@ -6,6 +6,19 @@ import './navbar.css';
 export function Navbar() {
 
   const navigate = useNavigate()
+  const token = localStorage.getItem('token');
+
+  const Logout= () =>{
+    localStorage.clear()
+    navigate("/")
+  }
+  const NavLog = ()=> {
+    if(token){
+      return <div onClick={Logout}>Logout</div>
+    }
+    else {return <Link to="/signin">Login</Link>}
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-section logo" >
@@ -19,7 +32,7 @@ export function Navbar() {
         <Link to="/whyeventsy">Why Eventsy</Link>
         <Link to="/aboutus">About Us</Link>
         <Link to="/profile">Profile</Link>
-        <Link to="/signin">Login</Link>
+        <NavLog/>
       </div>
     </nav>
   );

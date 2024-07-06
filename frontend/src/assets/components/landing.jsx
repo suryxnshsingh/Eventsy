@@ -15,7 +15,7 @@ export function Landing() {
             <h1>Welcome to <a className='eventsyLandingH'>Eventsy!</a></h1>
             <p style = {{ color : '#fff' }} >Your one-stop solution for all event management needs.</p>
             <br></br>
-            <button className="cta-button" onClick={()=>{navigate('/signin')}}><a className='landButton'>Create Your First Event</a></button>
+            <button className="cta-button" onClick={()=>{navigate('/form')}}><a className='landButton'>Create Your First Event</a></button>
         </div>
         <div className='landImg'>
         <img src = { land } className='limg' ></img>

@@ -13,11 +13,11 @@ const EventForm = ({ event = {}, isEditing = false }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const token = localStorage.getItem('token'); // Assuming the token is stored in localStorage
+    const token = localStorage.getItem('token');
 
     if (!token) {
       alert('You must be logged in to perform this action.');
-      navigate('/signin'); // Redirect to the signin page if no token is found
+      navigate('/signin');
       return;
     }
 
