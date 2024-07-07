@@ -14,9 +14,12 @@ export function Navbar() {
   }
   const NavLog = ()=> {
     if(token){
-      return <div onClick={Logout}>Logout</div>
+      return <div className="navbar-section user-actions">
+        <Link to="/profile">Profile</Link>
+        <div  onClick={Logout} className="logout">Logout</div>
+        </div>
     }
-    else {return <Link to="/signin">Login</Link>}
+    else return <Link to="/signin">Login</Link>
   }
 
   return (
@@ -31,7 +34,6 @@ export function Navbar() {
         <Link to="/events">Events</Link>
         <Link to="/whyeventsy">Why Eventsy</Link>
         <Link to="/aboutus">About Us</Link>
-        <Link to="/profile">Profile</Link>
         <NavLog/>
       </div>
     </nav>
