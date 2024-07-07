@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './event.css';
 
 const EventForm = ({ event = {}, isEditing = false }) => {
   const [title, setTitle] = useState(event.title || '');
@@ -41,7 +42,7 @@ const EventForm = ({ event = {}, isEditing = false }) => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="form">
       <form onSubmit={handleSubmit}>
         <h1>{isEditing ? 'Edit Event' : 'Create Event'}</h1>
         <div className="input-box">
@@ -53,14 +54,18 @@ const EventForm = ({ event = {}, isEditing = false }) => {
             required
           />
         </div>
-        <div className="input-box">
+        <br></br>
+        <div className="input-boxF">
           <textarea
             placeholder="Description"
+            rows="10"
+            cols = '70'
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
           />
         </div>
+        <br></br>
         <div className="input-box">
           <input
             type="date"
@@ -70,6 +75,7 @@ const EventForm = ({ event = {}, isEditing = false }) => {
             required
           />
         </div>
+        <br></br>
         <div className="input-box">
           <input
             type="text"
@@ -79,6 +85,7 @@ const EventForm = ({ event = {}, isEditing = false }) => {
             required
           />
         </div>
+        <br></br>
         <div className="input-box">
           <input
             type="text"
@@ -88,7 +95,7 @@ const EventForm = ({ event = {}, isEditing = false }) => {
             required
           />
         </div>
-        <button type="submit">{isEditing ? 'Update Event' : 'Create Event'}</button>
+        <button className='cta-button' type="submit">{isEditing ? 'Update Event' : 'Create Event'}</button>
       </form>
     </div>
   );
