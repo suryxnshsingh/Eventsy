@@ -3,6 +3,8 @@ import './profile.css';
 import profImg from './profile.png'
 
 export function Profile() {
+  const uname = localStorage.getItem('uname');
+  const mail = localStorage.getItem('mail');
   return (
     <div className="wrapperP">
       <div className="profile-card">
@@ -13,11 +15,11 @@ export function Profile() {
             className="profile-avatar"
           />
           <br></br>
-          <h2 className="profile-username">Bruce Wayne</h2>
+          <h2 className="profile-username">{uname}</h2>
         </div>
         <div className="profile-details">
-          <p><strong>Email:</strong> batman@wayne.com</p>
-          <p><strong>Member since:</strong> January 2024</p>
+          <p><strong>Email:</strong> {mail}</p>
+          <p><strong>Member since:</strong> July 2024</p>
         </div>
         <div className="profile-events">
           <h3>Your Events</h3>

@@ -23,7 +23,7 @@ const EventList = () => {
 
   return (
     <div>
-      <h1 className='lisH1'>All <a className='color'>Events</a></h1>
+      <h1 className='lisH1'>Discover <a className='color'>Events</a></h1>
       <div className="event-list">
         {events.map(event => (
           <EventCard key={event._id} event={event} />

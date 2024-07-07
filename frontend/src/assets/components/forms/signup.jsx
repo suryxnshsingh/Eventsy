@@ -22,11 +22,11 @@ export function Signup(){
             });
             console.log('Registered successfully:', response.data);
             const token = response.data.token;
-            const user = response.data.username;
+            const uname = response.data.username;
             const mail = response.data.email;
             if (token) {
                 localStorage.setItem('token', token);
-                localStorage.setItem('user', user);
+                localStorage.setItem('uname', uname);
                 localStorage.setItem('mail', mail)
                 navigate('/events');
             }

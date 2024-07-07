@@ -19,9 +19,13 @@ export function Signin(){
                 password,
             });
             console.log('Logged in successfully:', response.data);
-            const { token } = response.data;
+            const token = response.data;
+            const uname = response.data.uname;
+            const mail = response.data.mail;
             if (token) {
-                localStorage.setItem('token', token); 
+                localStorage.setItem('token', token);
+                localStorage.setItem('uname', uname);
+                localStorage.setItem('mail', mail)
                 navigate('/events');
             }
             //add shit here
