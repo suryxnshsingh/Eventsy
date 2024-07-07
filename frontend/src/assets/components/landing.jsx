@@ -106,7 +106,6 @@ export function Landing() {
                         <li><b>Node.js:</b> A JavaScript runtime built on Chrome's V8 engine.</li>
                         <li><b>Express.js:</b> A fast, unopinionated, minimalist web framework for Node.js.</li>
                         <li><b>MongoDB:</b> A NoSQL database for storing event data and user information.</li>
-                        <li><b>jsonwebtoken: </b> A library for generating and verifying JSON Web Tokens (JWT) for authentication.</li>
                     </ul>
       </section>
       <br></br>
