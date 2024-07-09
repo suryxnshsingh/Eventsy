@@ -18,6 +18,7 @@ const EventDetail = () => {
   const [error, setError] = useState(null);
   const { id: eventId } = useParams();
   const navigate= useNavigate()
+  const token = localStorage.getItem('token');
   const mail = localStorage.getItem('mail');
 
   useEffect(() => {
@@ -39,11 +40,28 @@ const EventDetail = () => {
   if (loading) return <div><h1>Loading...</h1></div>;
   if (error) return <div>{error}</div>;
 
+  const HandleDelete = async () => {
+    
+    if (!token) {
+      return alert('You need to be logged in to delete an event.');
+    }
+    try {
+      await axios.delete(`http://localhost:3000/events/${eventId}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      alert('Event deleted successfully');
+      navigate('/events');
+    } catch (error) {
+      console.error('Error deleting event:', error);
+      alert('Failed to delete event');
+    }
+  };
+
   const AdminFeatures =()=>{
     if(event.creator.email === mail){
       return <div>
         <button className='Discover2'><MdEdit /> Edit</button>
-        <button className='Discover2'><MdDelete /> Delete</button>
+        <button className='Discover2' onClick={HandleDelete}><MdDelete /> Delete</button>
       </div>
     }
     else return <div>

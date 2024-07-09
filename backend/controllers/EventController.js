@@ -35,14 +35,14 @@ const getEventById = async (req, res) => {
 };
 
 
-// const getUserEvents = async (req, res) => {
-//   try {
-//     const events = await Event.find({ 'creator' : req.user._id });
-//     res.status(200).json(events);
-//   } catch (error) {
-//     res.status(500).json({ message: 'Server Error' });
-//   }
-// };
+const getUserEvents = async (req, res) => {
+  try {
+    const events = await Event.find({ 'creator' : req.user._id });
+    res.status(200).json(events);
+  } catch (error) {
+    res.status(500).json({ message: 'Server Error' });
+  }
+};
 
 
 const updateEvent = async (req, res) => {
@@ -68,17 +68,16 @@ const updateEvent = async (req, res) => {
   const deleteEvent = async (req, res) => {
     try {
       const event = await Event.findById(req.params.id);
-      if (!event) {
-        return res.status(404).json({ message: 'Event not found' });
-      }
       if (event.creator.toString() !== req.user._id.toString()) {
+        console.log('Not authorized to delete this event');
         return res.status(401).json({ message: 'Not authorized' });
       }
-      await event.remove();
+      await Event.findByIdAndDelete(req.params.id);
       res.json({ message: 'Event removed' });
     } catch (error) {
-      res.status(500).json({ message: 'Server error' });
+      console.error('Error deleting event:', error);
+      res.status(500).json({ message: 'Server error', error: error.message });
     }
   };
-  
-  module.exports = { createEvent, getEvents, getEventById, updateEvent, deleteEvent };
+
+  module.exports = { createEvent, getEvents, getEventById, updateEvent, deleteEvent, getUserEvents };
