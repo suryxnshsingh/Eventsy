@@ -7,6 +7,14 @@ import land from '../land.png'
 
 export function Landing() {
     const navigate = useNavigate()
+    const token = localStorage.getItem('token');
+
+   const Redirecter = ()=>{
+    if(token) navigate('/form')
+
+    else navigate('/signin')
+   } 
+
   return (
     <div className="landing-page">
         <br></br>
@@ -15,7 +23,7 @@ export function Landing() {
             <h1>Welcome to <a className='eventsyLandingH'>Eventsy!</a></h1>
             <p style = {{ color : '#fff' }} >Your one-stop solution for all event management needs.</p>
             <br></br>
-            <button className="cta-button" onClick={()=>{navigate('/form')}}><a className='landButton'>Create Your First Event</a></button>
+            <button className="cta-button" onClick={Redirecter}><a className='landButton'>Create Your First Event</a></button>
         </div>
         <div className='landImg'>
         <img src = { land } className='limg' ></img>

@@ -2,12 +2,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
+    padding-inline: 20%;
 }
 
 .event-card{
     width: 100%;
     background: transparent;
-    border: 2px solid rgba(255, 44, 156, .4);
+    border: 2px solid rgba(255, 44, 156, 0.4);
     backdrop-filter: blur(30px);
     color: #fff;
     border-radius: 10px;
@@ -18,15 +19,17 @@
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition-duration: 0.2s;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .priceTag{
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 1);
     color: #ff2c9c;
     border-radius: 5px;
     margin: 5px;
     width: 100px;
     text-align: center;
+    border: solid;
 }
 
 .cardh23{
@@ -78,14 +81,16 @@
 .Discover2{
     font-size: 20px;
     margin: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 8px;
-    border: 2px solid rgba(255, 44, 156, .4);
-    background: rgba(255, 44, 156, .2);
+    border: 2px solid;
+    background: #ff2c9c;
     color: white;
 }
 .Discover2:hover{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    color: #ff2c9c;
 }
 .details{
     width: 60%;
@@ -131,4 +136,39 @@
     display: flex;
     justify-content: center;
     width: auto;
+}
+
+.create{
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-button {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    border: solid;
+    background-color: #ff2c9c;
+    color: #fff;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    transition-duration: 0.4s;
+    margin-left: 20px;
+}
+.form-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #ff2c9c;
+
+    .landButton{
+        color: #fff;
+        opacity: 1;
+    }
 }

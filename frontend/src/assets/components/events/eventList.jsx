@@ -3,10 +3,11 @@ import axios from 'axios';
 import EventCard from './EventCard';
 import { FaPlusCircle } from "react-icons/fa";
 import './event.css';
+import { useNavigate } from 'react-router-dom';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
-
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -24,6 +25,11 @@ const EventList = () => {
   return (
     <div>
       <h1 className='lisH1'>Discover <a className='color'>Events</a></h1>
+      <div className='create'>
+        <div><h2>Looking to create an Event?</h2></div>
+        <div className='form-button' onClick={()=>{navigate('/form')}}>Create Event Now!</div>
+      </div>
+      <br></br>
       <div className="event-list">
         {events.map(event => (
           <EventCard key={event._id} event={event} />

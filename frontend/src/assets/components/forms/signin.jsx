@@ -19,7 +19,7 @@ export function Signin(){
                 password,
             });
             console.log('Logged in successfully:', response.data);
-            const token = response.data;
+            const token = response.data.token;
             const uname = response.data.uname;
             const mail = response.data.mail;
             if (token) {

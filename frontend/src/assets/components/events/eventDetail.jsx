@@ -7,6 +7,10 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { IoArrowBackCircle } from "react-icons/io5";
+import { FaUserPlus } from "react-icons/fa";
+import { IoBookmark } from "react-icons/io5";
+import { MdEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 
 const EventDetail = () => {
   const [event, setEvent] = useState(null);
@@ -14,6 +18,7 @@ const EventDetail = () => {
   const [error, setError] = useState(null);
   const { id: eventId } = useParams();
   const navigate= useNavigate()
+  const mail = localStorage.getItem('mail');
 
   useEffect(() => {
     const fetchEvent = async () => {
@@ -34,6 +39,19 @@ const EventDetail = () => {
   if (loading) return <div><h1>Loading...</h1></div>;
   if (error) return <div>{error}</div>;
 
+  const AdminFeatures =()=>{
+    if(event.creator.email === mail){
+      return <div>
+        <button className='Discover2'><MdEdit /> Edit</button>
+        <button className='Discover2'><MdDelete /> Delete</button>
+      </div>
+    }
+    else return <div>
+      <button className='Discover2'><FaUserPlus /> Register</button>
+      <button className='Discover2'><IoBookmark /> Save</button>
+    </div>
+  }
+
   return (
     <div className="details">
       <div className='Discover' onClick={()=>{navigate('/events')}} ><IoArrowBackCircle className='iconD'/> Discover Events</div>
@@ -48,8 +66,9 @@ const EventDetail = () => {
       <p><AiOutlineDollarCircle className='iconD'/>{event.entry}</p>
       <br></br>
       <p>{event.description}</p>
-      <button className='Discover2'>Register</button>
-      <button className='Discover2'>Save</button>
+      <div style={{display : 'flex'}}>
+        <AdminFeatures/>
+      </div>
       </div>
     </div>
   );
