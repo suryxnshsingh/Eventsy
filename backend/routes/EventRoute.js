@@ -9,6 +9,6 @@ router.get('/', getEvents);
 router.get('/:id', getEventById);
 router.put('/:id', protect, updateEvent);
 router.delete('/:id', protect, deleteEvent);
-router.get('/user-events', protect, getUserEvents);
+router.get('/myevents', protect, getUserEvents);
 
 module.exports = router;
