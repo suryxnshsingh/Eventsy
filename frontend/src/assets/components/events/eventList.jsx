@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate()
   useEffect(() => {
     const fetchEvents = async () => {
@@ -16,11 +17,15 @@ const EventList = () => {
 
       } catch (error) {
         console.error('Error fetching events:', error);
+      }finally {
+        setLoading(false);
       }
     };
 
     fetchEvents();
   }, []);
+
+  if (loading) return <div><h1>Loading...</h1></div>;
 
   return (
     <div>
