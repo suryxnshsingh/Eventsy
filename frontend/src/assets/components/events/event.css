@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
-    padding-inline: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .event-card{

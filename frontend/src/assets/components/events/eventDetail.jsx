@@ -11,6 +11,7 @@ import { FaUserPlus } from "react-icons/fa";
 import { IoBookmark } from "react-icons/io5";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
 
 const EventDetail = () => {
   const [event, setEvent] = useState(null);
@@ -62,6 +63,7 @@ const EventDetail = () => {
       return <div>
         <button className='Discover2'><MdEdit /> Edit</button>
         <button className='Discover2' onClick={HandleDelete}><MdDelete /> Delete</button>
+        <button className='Discover2'><FaUser /> See Registered Participants</button>
       </div>
     }
     else return <div>
