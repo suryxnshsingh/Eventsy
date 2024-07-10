@@ -65,7 +65,7 @@ const EventForm = () => {
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
-        <h1>{isEditing ? 'Edit Event' : 'Create Event'}</h1>
+        <h1>{isEditing ? 'Edit ' : 'Create '}<a className='color'>Event</a></h1>
         <div className="input-box">
           <input
             type="text"
@@ -116,7 +116,8 @@ const EventForm = () => {
             required
           />
         </div>
-        <button className='cta-button' type="submit">{isEditing ? 'Update Event' : 'Create Event'}</button>
+        <br/>
+        <button className='form-button' type="submit">{isEditing ? 'Update Event' : 'Create Event'}</button>
       </form>
     </div>
   );
