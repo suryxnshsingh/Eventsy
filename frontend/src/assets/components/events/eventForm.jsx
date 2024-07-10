@@ -1,45 +1,66 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './event.css';
 
-const EventForm = ({ event = {}, isEditing = false }) => {
-  const [title, setTitle] = useState(event.title || '');
-  const [description, setDescription] = useState(event.description || '');
-  const [date, setDate] = useState(event.date || '');
-  const [location, setLocation] = useState(event.location || '');
-  const [entry, setEntry] = useState(event.entry || '');
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const token = localStorage.getItem('token');
-
-    if (!token) {
-      alert('You must be logged in to perform this action.');
-      navigate('/signin');
-      return;
-    }
-
-    try {
-      const eventData = { title, description, date, location, entry };
-      const config = {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      };
-
+const EventForm = () => {
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [date, setDate] = useState('');
+    const [location, setLocation] = useState('');
+    const [entry, setEntry] = useState('');
+    const navigate = useNavigate();
+    const { id: eventId } = useParams();
+    const isEditing = !!eventId;
+  
+    useEffect(() => {
       if (isEditing) {
-        await axios.put(`http://localhost:3000/events/${event._id}`, eventData, config);
-      } else {
-        await axios.post('http://localhost:3000/events', eventData, config);
+        const fetchEvent = async () => {
+          try {
+            const response = await axios.get(`http://localhost:3000/events/${eventId}`);
+            const event = response.data;
+            setTitle(event.title);
+            setDescription(event.description);
+            setDate(event.date.split('T')[0]);
+            setLocation(event.location);
+            setEntry(event.entry);
+          } catch (error) {
+            console.error('Error fetching event:', error);
+          }
+        };
+        fetchEvent();
       }
-      navigate('/events');
-    } catch (error) {
-      console.error('Error saving event:', error);
-    }
-  };
+    }, [eventId, isEditing]);
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      const token = localStorage.getItem('token');
+  
+      if (!token) {
+        alert('You must be logged in to perform this action.');
+        navigate('/signin');
+        return;
+      }
+  
+      try {
+        const eventData = { title, description, date, location, entry };
+        const config = {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        };
+  
+        if (isEditing) {
+          await axios.put(`http://localhost:3000/events/${eventId}`, eventData, config);
+        } else {
+          await axios.post('http://localhost:3000/events', eventData, config);
+        }
+        navigate('/events');
+      } catch (error) {
+        console.error('Error saving event:', error);
+      }
+    };
 
   return (
     <div className="form">

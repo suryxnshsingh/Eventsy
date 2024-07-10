@@ -14,7 +14,7 @@ const EventCard = ({ event }) => {
       <br></br>
       <p><FaUser /> {event.creator.username}</p>
       <p><FaLocationDot /> {event.location}</p>
-      <p><BsCalendarDateFill /> {event.date}</p>
+      <p><BsCalendarDateFill /> {event.date.split('T')[0]}</p>
       <br></br>
       <div className='priceTag'>${event.entry}</div>
       {/* <Link to={`http://localhost:3000/events/${event.id}`}>View Details</Link> */}

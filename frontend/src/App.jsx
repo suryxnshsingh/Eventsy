@@ -33,6 +33,7 @@ function App() {
             <Route path = '/events' element = {<EventList/>} />
             <Route path = "/events/:id" element={<EventDetail />} />
             <Route path = "/form" element={<EventForm />} />
+            <Route path = "/events/edit/:id" element={<EventForm />} />
           </Routes>
           </main>
         </BrowserRouter>
