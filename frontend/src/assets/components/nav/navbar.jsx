@@ -19,7 +19,10 @@ export function Navbar() {
         <div  onClick={Logout} className="logout">Logout</div>
         </div>
     }
-    else return <Link to="/signin">Login</Link>
+    else return <>
+      <Link to="/signin">Login</Link>
+      <Link to="/signup">Signup</Link>
+    </>
   }
 
   return (
