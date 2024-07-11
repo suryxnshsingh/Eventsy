@@ -57,7 +57,7 @@ export function Signup(){
             <button type="submit">Create Account</button>
 
             <div className="register">
-                <p>Already have an account? <a href="/signin">Login here!</a></p>
+                <p>Already have an account? <a onClick={()=>{navigate('/signin')}} className="link"><u>Login here!</u></a></p>
             </div>
         </form>
     </div>

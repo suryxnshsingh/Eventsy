@@ -107,3 +107,8 @@ button:hover{
     text-decoration: underline;
 
 }
+
+.link{
+    color: #800080;
+    cursor: pointer;
+}
