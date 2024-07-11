@@ -33,8 +33,6 @@ export function Landing() {
         <br></br><br></br>
         <h1 className='Lh1'>Key Features</h1>
       <section className="features-overview">
-
-
         <div className="features-grid">
           <div className="feature-card CSS">
             <FaRegCalendarAlt className="icon" />
@@ -67,8 +65,8 @@ export function Landing() {
 
       <h1 className='Lh1'>How It Works</h1>
       <section className="how-it-works">
-        <div className="steps">
-          <div className="step CSS" onClick={()=>{navigate('/signin')}}>
+        <div className="features-grid">
+          <div className="feature-card CSS" onClick={()=>{navigate('/signin')}}>
             
             <FaUserPlus className="card-icon" />
             <h3>Step 1</h3>
@@ -76,14 +74,14 @@ export function Landing() {
           </div>
           <MdNavigateNext className='next'/>
 
-          <div className="step CSS" onClick={()=>{navigate('/events')}}>
+          <div className="feature-card CSS" onClick={()=>{navigate('/events')}}>
             <FaCalendarCheck className="card-icon" />
             <h3>Step 2</h3>
             <p>Register your event.</p>
           </div>
           <MdNavigateNext className='next'/>
 
-          <div className="step CSS">
+          <div className="feature-card CSS">
             <FaCoffee className="card-icon" />
             <h3>Step 3</h3>
             <p>Sit back and Relax</p>
