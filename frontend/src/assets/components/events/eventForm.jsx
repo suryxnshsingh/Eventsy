@@ -17,7 +17,7 @@ const EventForm = () => {
       if (isEditing) {
         const fetchEvent = async () => {
           try {
-            const response = await axios.get(`http://localhost:3000/events/${eventId}`);
+            const response = await axios.get(`https://eventsy.onrender.com/events/${eventId}`);
             const event = response.data;
             setTitle(event.title);
             setDescription(event.description);
@@ -52,9 +52,9 @@ const EventForm = () => {
         };
   
         if (isEditing) {
-          await axios.put(`http://localhost:3000/events/${eventId}`, eventData, config);
+          await axios.put(`https://eventsy.onrender.com/events/${eventId}`, eventData, config);
         } else {
-          await axios.post('http://localhost:3000/events', eventData, config);
+          await axios.post('https://eventsy.onrender.com/events', eventData, config);
         }
         navigate('/events');
       } catch (error) {

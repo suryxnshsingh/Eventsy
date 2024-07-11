@@ -12,7 +12,7 @@ const EventList = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/events');
+        const res = await axios.get('https://eventsy.onrender.com/events');
         setEvents(res.data);
 
       } catch (error) {

@@ -14,7 +14,7 @@ export function Signin(){
     const handleSubmit = async (event) => {
         event.preventDefault();
             try {
-            const response = await axios.post('http://localhost:3000/auth/signin', {
+            const response = await axios.post('https://eventsy.onrender.com/auth/signin', {
                 email,
                 password,
             });

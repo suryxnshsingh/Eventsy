@@ -24,7 +24,7 @@ const EventDetail = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/events/${eventId}`);
+        const response = await axios.get(`https://eventsy.onrender.com/events/${eventId}`);
         setEvent(response.data);
       } catch (error) {
         setError('Error fetching event');

@@ -17,7 +17,7 @@ const EventCard = ({ event }) => {
       <p><BsCalendarDateFill /> {event.date.split('T')[0]}</p>
       <br></br>
       <div className='priceTag'>${event.entry}</div>
-      {/* <Link to={`http://localhost:3000/events/${event.id}`}>View Details</Link> */}
+      {/* <Link to={`https://eventsy.onrender.com/events/${event.id}`}>View Details</Link> */}
     </div>
   );
 };
