@@ -16,14 +16,16 @@
     border-radius: 10px;
     padding: 30px 40px;
     text-align: center;
-    margin: 0 auto;
+    margin: 5px;
 }
   
-.icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.lan{
+    display: flex;
+    justify-content: center;
 }
-  
+.features-gri{
+    display: flex;
+}
 .cta-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -68,15 +70,10 @@
 }
 
 .next{
-    font-size: 100px;
+    font-size: 200px;
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 20%;
-    left: 37%;
-    margin: 0;
     color : #ff2c9c;
-
 }
 
 .Lh1{

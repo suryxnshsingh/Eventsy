@@ -32,8 +32,8 @@ export function Landing() {
 
         <br></br><br></br>
         <h1 className='Lh1'>Key Features</h1>
-      <section className="features-overview">
-        <div className="features-grid">
+      <section className="lan">
+        <div className="features-gri">
           <div className="feature-card CSS">
             <FaRegCalendarAlt className="icon" />
             <h3 className='Lh3'>Comprehensive Management</h3>
@@ -64,8 +64,8 @@ export function Landing() {
       <br></br>
 
       <h1 className='Lh1'>How It Works</h1>
-      <section className="how-it-works">
-        <div className="features-grid">
+      <section className="lan">
+        <div className="features-gri">
           <div className="feature-card CSS" onClick={()=>{navigate('/signin')}}>
             
             <FaUserPlus className="card-icon" />
