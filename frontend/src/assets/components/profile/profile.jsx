@@ -22,7 +22,7 @@ export function Profile() {
           <p><strong>Member since:</strong> July 2024</p>
         </div>
         <div className="profile-events">
-          <h3>Your Events</h3>
+          <h3>Registered Events</h3>
           <ul>
             <li>Event 1</li>
             <li>Event 2</li>
