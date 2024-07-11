@@ -6,14 +6,16 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { IoArrowBackCircle } from "react-icons/io5";
-import { FaUserPlus, FaUser } from "react-icons/fa";
+import { FaUserPlus, FaUser, FaUserCheck } from "react-icons/fa";
 import { IoBookmark } from "react-icons/io5";
-import { MdEdit, MdDelete } from "react-icons/md";
+import { MdEdit, MdDelete, MdBookmarkAdded } from "react-icons/md";
 
 const EventDetail = () => {
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isRegistered, setIsRegistered] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
   const { id: eventId } = useParams();
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
@@ -58,6 +60,16 @@ const EventDetail = () => {
     navigate(`/events/edit/${eventId}`);
   };
 
+  const handleRegister = () => {
+    //logic
+    setIsRegistered(prevState => !prevState);
+  };
+
+  const handleSave = () => {
+    //logic
+    setIsSaved(prevState => !prevState);
+  };
+
   const AdminFeatures = () => {
     if (event.creator.email === mail) {
       return (
@@ -70,8 +82,12 @@ const EventDetail = () => {
     } else {
       return (
         <div>
-          <button className='Discover2'><FaUserPlus /> Register</button>
-          <button className='Discover2'><IoBookmark /> Save</button>
+          <button className='Discover2' onClick={handleRegister}>
+            {isRegistered ? <><FaUserCheck /> Registered</> : <><FaUserPlus /> Register</>}
+          </button>
+          <button className='Discover2' onClick={handleSave}>
+            {isSaved ? <><MdBookmarkAdded /> Saved</> : <><IoBookmark /> Save</>}
+          </button>
         </div>
       );
     }
