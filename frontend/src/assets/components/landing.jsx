@@ -21,7 +21,7 @@ export function Landing() {
         <div className='landMain' style={{display : 'flex', justifyContent : 'center'}}>
         <div style={{display : 'flex', justifyContent : 'center', flexDirection : "column", alignItems : "center"}}>
             <h1>Welcome to <a className='eventsyLandingH'>Eventsy!</a></h1>
-            <p style = {{ color : '#fff' }} >Your one-stop solution for all event management needs.</p>
+            <p style = {{ color : '#fff', textAlign : 'center' }} >Your one-stop solution for all event management needs.</p>
             <br></br>
             <button className="cta-button" onClick={Redirecter}><a className='landButton'>Create Your First Event</a></button>
         </div>
