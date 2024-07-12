@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaUsers, FaStar, FaRegCalendarAlt, FaRocket, FaChartLine, FaUserPlus, FaCalendarCheck, FaCoffee } from 'react-icons/fa';
 import './landing.css';
 import { useNavigate } from 'react-router-dom';
@@ -10,30 +10,32 @@ export function Landing() {
     const token = localStorage.getItem('token');
 
    const Redirecter = ()=>{
-    if(token) navigate('/form')
-
-    else navigate('/signin')
+    if(!token) {
+      navigate('/signup')
+    }
+    else {
+      navigate('/events')
    } 
+}
 
   return (
     <div className="landing-page">
         <br></br>
-        <div className='landMain' style={{display : 'flex', justifyContent : 'center'}}>
-        <div style={{display : 'flex', justifyContent : 'center', flexDirection : "column", alignItems : "center"}}>
-            <h1>Welcome to <a className='eventsyLandingH'>Eventsy!</a></h1>
-            <p style = {{ color : '#fff', textAlign : 'center' }} >Your one-stop solution for all event management needs.</p>
-            <br></br>
-            <button className="cta-button" onClick={Redirecter}><a className='landButton'>Create Your First Event</a></button>
-        </div>
-        <div className='landImg'>
-        <img src = { land } className='limg' ></img>
-        </div>
+        <div className='landMain'>
+          <div className='landText'>
+              <h1>Welcome to <a className='eventsyLandingH'>Eventsy!</a></h1>
+              <p style = {{ color : '#fff', textAlign : 'center' }} >Your one-stop solution for all event management needs.</p>
+              <button className="cta-button" onClick={Redirecter}><a className='landButton'> Discover Events! </a></button>
+          </div>
+          <div >
+            <img src = { land } className='landImg' ></img>
+          </div>
         </div>
 
         <br></br><br></br>
         <h1 className='Lh1'>Key Features</h1>
-      <section className="lan">
-        <div className="features-gri">
+      <section>
+        <div className="features-grid">
           <div className="feature-card CSS">
             <FaRegCalendarAlt className="icon" />
             <h3 className='Lh3'>Comprehensive Management</h3>
@@ -65,21 +67,19 @@ export function Landing() {
 
       <h1 className='Lh1'>How It Works</h1>
       <section className="lan">
-        <div className="features-gri">
+        <div className="features-grid">
           <div className="feature-card CSS" onClick={()=>{navigate('/signin')}}>
             
             <FaUserPlus className="card-icon" />
             <h3>Step 1</h3>
             <p>Create an account.</p>
           </div>
-          <MdNavigateNext className='next'/>
 
           <div className="feature-card CSS" onClick={()=>{navigate('/events')}}>
             <FaCalendarCheck className="card-icon" />
             <h3>Step 2</h3>
             <p>Register your event.</p>
           </div>
-          <MdNavigateNext className='next'/>
 
           <div className="feature-card CSS">
             <FaCoffee className="card-icon" />

@@ -7,8 +7,8 @@ import { FaReddit } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="footer" style={{width : '100%', height : '30%' }}>
-            <div className="column">
+        <footer className="footer">
+            <div className="about">
                     <h3>ABOUT</h3>
                     <ul>
                         <li>Contact Us</li>
@@ -17,7 +17,7 @@ const Footer = () => {
                         <li>&copy;Copyright</li>
                     </ul>
                 </div>
-                <div className="column">
+                <div className="socials">
                     <h3>CONNECT HERE</h3>
                     <ul>
                         <li><AiFillInstagram />/eventify</li>
@@ -26,7 +26,7 @@ const Footer = () => {
                         <li><FaReddit />/eventify</li>
                     </ul>
                 </div>
-                <div className="column">
+                <div className="official">
                     <h3>OFFICIAL</h3>
                     <ul>
                         <li>+91 987654321</li>

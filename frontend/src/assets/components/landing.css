@@ -1,11 +1,3 @@
-.landing-page {
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-sizing: border-box;
-}
   
 .CSS {
     max-width: 420px;
@@ -18,17 +10,38 @@
     text-align: center;
     margin: 5px;
 }
-  
-.lan{
+
+.landMain{
+    display: flex;
+    justify-content: space-around;
+}
+
+.landText{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
-.features-gri{
-    display: flex;
+@media (max-width: 768px){
+    .landMain{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column-reverse;
+    }
+    .landImg{
+        width: 100%;
+    }
+    .landText{
+        margin-top: 20%;
+        width: 100%;
+    }
+
 }
 .cta-button {
-    margin-top: 20px;
-    padding: 10px 20px;
+    align-self: center;
+    inset-block: 10% ;
+    margin-top: 10%;
+    padding-block: 2.5%;
+    padding-inline: 5%;
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
     color: #ff2c9c;
@@ -78,11 +91,6 @@
 
 .Lh1{
     margin-top: 70px;
-}
-
-.limg{
-    width: 525px;
-    margin-inline: 150px;
 }
 
 .eventsyLandingH {
