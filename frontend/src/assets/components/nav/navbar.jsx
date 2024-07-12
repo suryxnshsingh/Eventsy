@@ -15,20 +15,21 @@ export function Navbar() {
   const Logout = () => {
     localStorage.clear();
     navigate("/");
+    setMenuOpen(!menuOpen);
   };
 
   const NavLog = () => {
     if (token) {
       return (
         <div className="navbar-section user-actions">
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile" onClick={toggleMenu}>Profile</Link>
           <div onClick={Logout} className="logout">Logout</div>
         </div>
       );
     } else {
       return (
         <>
-          <Link to="/signup">Signup</Link>
+          <Link to="/signup" onClick={toggleMenu}>Signup</Link>
         </>
       );
     }

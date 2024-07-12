@@ -39,7 +39,7 @@ const EventList = () => {
                           /></div>;
 
   return (
-    <div>
+    <div className='listmain'>
       <h1 className='lisH1'>Discover <a className='color'>Events</a></h1>
       <div className='create'>
         <div><h2>Looking to create an Event?</h2></div>
