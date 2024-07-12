@@ -131,6 +131,7 @@
 @media (max-width: 786px){
     .EBanner{
         width: 90vw;
+        height: 17vh;
         margin-bottom: 5%;
     }
     .details{

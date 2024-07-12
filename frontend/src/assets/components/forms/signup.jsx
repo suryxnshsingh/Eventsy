@@ -48,7 +48,7 @@ export function Signup(){
                 <MdEmail className="icon"/>
             </div>
             <div className="input-box">
-                <input type="text" placeholder="Name" value={username} onChange={(e) => setUsername(e.target.value)} required/>
+                <input type="text" placeholder="Full Name" value={username} onChange={(e) => setUsername(e.target.value)} required/>
                 <FaUser className="icon"/>
             </div>
             <div className="input-box">
