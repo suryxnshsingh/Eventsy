@@ -1,7 +1,7 @@
 
 
 # Eventsy: OneStop solution for all your event management needs
-Eventsy is a comprehensive event management application that offers the following features:
+Eventsy is a comprehensive event management application.
 
 ## Tech Stack🔧
 
