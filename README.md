@@ -16,7 +16,7 @@ React Router: For managing client-side routing and navigation.<br/>
 Node.js: As the runtime environment for building the server-side application.<br/>
 Express.js: A fast and minimalist web framework for Node.js, used for building the RESTful APIs.<br/>
 MongoDB: A NoSQL database used for storing and retrieving application data efficiently.<br/>
-Mongoose: An Object Data Modeling (ODM) library for MongoDB, used to manage relationships between data and schema validation.<br/>
+Mongoose: An ODM library for MongoDB, used to manage relationships between data and schema validation.<br/>
 JWT (JSON Web Token): For secure user authentication and session management.<br/>
 
 
