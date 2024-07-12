@@ -1,55 +1,72 @@
-
+/* Base styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(30px);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin: 10px 20px;
+}
 
+.navbar-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-section.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar-section.nav-links a,
+.navbar-section.user-actions a,
+.logout {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.navbar-section.nav-links a:hover,
+.navbar-section.user-actions a:hover,
+.logout:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ff2c9c;
+}
+.menu-icon {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
   }
-  
-  .navbar-section {
+
+  .navbar-section.nav-links {
+    flex-direction: column;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+  }
+
+  .navbar-section.nav-links.show{
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
     cursor: pointer;
-  }
-  
-  .navbar-section.logo h1 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  .navbar-section.nav-links a,
-  .navbar-section.user-actions a {
+    font-size: 24px;
     color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px;
-    transition: background 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    font-weight: 500;
+    margin-left: auto;
   }
   
-  .navbar-section.nav-links a:hover,
-  .navbar-section.user-actions a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ff2c9c;
-  }
-  .logout{
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px;
-    transition: background 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    font-weight: 500;
-  }
-  .logout:hover{
-    background: rgba(255, 255, 255, 0.1);
-    color: #ff2c9c;
-  }
+}
