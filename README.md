@@ -8,7 +8,7 @@ Eventsy is a comprehensive event management application.
 ### Frontend:
 
 React.js:Used for building the user interface with a component-based architecture, ensuring reusable and maintainable code.<br/>
-Axios: For making HTTP requests to the backend APIs.
+Axios: For making HTTP requests to the backend APIs.<br/>
 React Router: For managing client-side routing and navigation.
 
 ### Backend:
