@@ -25,7 +25,7 @@ const EventList = () => {
     fetchEvents();
   }, []);
 
-  if (loading) return <div style={{ display : 'grid', placeItems : 'center', marginTop : '20%'}}>
+  if (loading) return <div style={{ display : 'grid', placeItems : 'center', marginTop : '15%'}}>
                         
                         <Grid
                           visible={true}
