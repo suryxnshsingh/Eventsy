@@ -3,7 +3,7 @@
 # Eventsy: OneStop solution for all your event management needs
 Eventsy is a comprehensive event management application.
 
-## Tech Stack🔧
+## 🔧Tech Stack:
 
 ### Frontend:
 
