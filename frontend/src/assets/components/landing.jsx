@@ -69,11 +69,11 @@ export function Landing() {
       <section className="lan">
         <div className="features-grid">
           <div className="feature-card CSS" onClick={()=>{navigate('/signin')}}>
-            
             <FaUserPlus className="card-icon" />
             <h3>Step 1</h3>
             <p>Create an account.</p>
           </div>
+          <MdNavigateNext className='next' />
 
           <div className="feature-card CSS" onClick={()=>{navigate('/events')}}>
             <FaCalendarCheck className="card-icon" />

@@ -6,7 +6,7 @@ import './navbar.css';
 export function Navbar() {
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -17,7 +17,7 @@ export function Navbar() {
     navigate("/");
     setMenuOpen(!menuOpen);
   };
-
+ 
   const NavLog = () => {
     if (token) {
       return (
