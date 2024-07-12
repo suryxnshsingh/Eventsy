@@ -80,7 +80,7 @@ const EventForm = () => {
           <textarea
             placeholder="Description"
             rows="10"
-            cols = '70'
+            cols = '40'
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
@@ -110,7 +110,7 @@ const EventForm = () => {
         <div className="input-box">
           <input
             type="text"
-            placeholder="Entry"
+            placeholder="Entry Fee"
             value={entry}
             onChange={(e) => setEntry(e.target.value)}
             required
