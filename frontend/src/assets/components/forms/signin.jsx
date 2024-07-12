@@ -65,7 +65,7 @@ export function Signin(){
                                                 /> : 'Login'}</button>
 
             <div className="register">
-                <p>Dont't have an account? <a onClick={()=>{navigate('/signup')}} className="link"><u>Register here!</u></a></p>
+                <p>Dont't have an account? <a onClick={()=>{navigate('/signup')}} className="link"><u> Create Account!</u></a></p>
             </div>
         </form>
     </div>

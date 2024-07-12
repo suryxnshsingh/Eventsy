@@ -115,19 +115,27 @@
     color: #ff2c9c;
 }
 .details{
-    width: 60%;
+    width: 70%;
     background: transparent;
     backdrop-filter: blur(30px);
     color: #fff;
     border-radius: 15px;
-
     font-size: 20px;
-    margin-block: 0;
     margin-inline: auto;
 }
 .EBanner{
     border-radius: 20px;
-    width: 850px;
+    width: 70vw;
+}
+@media (max-width: 786px){
+    .EBanner{
+        width: 90vw;
+        margin-bottom: 5%;
+    }
+    .details{
+        margin-inline: 0;
+        width: 40vh;
+    }
 }
 
 .iconD{
@@ -157,7 +165,6 @@
 .form{
     display: flex;
     justify-content: center;
-    width: auto;
 }
 
 .form-button {
