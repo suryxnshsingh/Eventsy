@@ -125,7 +125,8 @@
 }
 .EBanner{
     border-radius: 20px;
-    width: 70vw;
+    width: 65vw;
+    height: 40vh;
 }
 @media (max-width: 786px){
     .EBanner{

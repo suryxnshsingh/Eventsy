@@ -112,7 +112,7 @@ const EventDetail = () => {
       <div>
         <img src={banner} alt='banner img' className='EBanner'></img>
         <h2 className='color'>{event.title}</h2>
-        <p>Organised By : <b>{event.creator.username} ({event.creator.email})</b></p>
+        <p>Organised By : <b>{event.creator.username} ({event.creator.email} )</b></p>
         <br></br>
         <p><MdOutlineLocationOn className='iconD' />{event.location}</p>
         <p><BsCalendarDate className='iconD' />{event.date.split('T')[0]}</p>

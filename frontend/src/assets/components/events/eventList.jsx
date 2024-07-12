@@ -9,6 +9,17 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate()
+  const token = localStorage.getItem('token');
+
+  const Redirecter = ()=>{
+    if(!token) {
+      navigate('/signup')
+    }
+    else {
+      navigate('/form')
+   } 
+  }
+
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -43,7 +54,7 @@ const EventList = () => {
       <h1 className='lisH1'>Discover <a className='color'>Events</a></h1>
       <div className='create'>
         <div><h2>Looking to create an Event?</h2></div>
-        <div className='form-button' onClick={()=>{navigate('/form')}}>Create Event Now!</div>
+        <div className='form-button' onClick={Redirecter}>Create Event Now!</div>
       </div>
       <br></br>
       <div className="event-list">

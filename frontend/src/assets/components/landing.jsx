@@ -9,14 +9,14 @@ export function Landing() {
     const navigate = useNavigate()
     const token = localStorage.getItem('token');
 
-   const Redirecter = ()=>{
+  const Redirecter = ()=>{
     if(!token) {
       navigate('/signup')
     }
     else {
       navigate('/events')
    } 
-}
+  }
 
   return (
     <div className="landing-page">
