@@ -1,16 +1,13 @@
 
-.cardAU {
+.about-me {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(30px);
   color: #fff;
   border-radius: 10px;
   padding: 30px;
-  margin: 0px;;
-  width: 600px;
-  height: 500px;
-  margin-top: 50;
-  margin-left : 150px;
+  width: 70%;
+  height: auto;
 }
 
 h1 {
@@ -20,14 +17,19 @@ h1 {
   color : #fff;
 }
 
-.wrapperA {
+.AUmain {
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
-  margin-right: 150px;
+  margin-inline: 5%;
+
+}
+@media (max-width: 768px){
+  .AUmain{
+    flex-direction: column;
+  }
+  .about-me{
+    width: 100%;
+  }
 }
 
 .profile-pic {
@@ -38,9 +40,6 @@ h1 {
   border: 2px solid rgba(255, 255, 255, .2);
 }
 
-.info {
-  flex: 1;
-}
 
 .info h2 {
   margin: 0 0 10px;
@@ -64,6 +63,6 @@ h1 {
 .about-eventsy {
   text-align: left;
   padding: 200;
-  margin: 50px;
   color: #fff;
+  margin : 5%;
 }

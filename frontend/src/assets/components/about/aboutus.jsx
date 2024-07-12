@@ -7,16 +7,14 @@ import sury from './sury.png'
 export function AboutUs() {
   return (<div>
     <h1>About <a className='color'>Us</a></h1>
-    <br></br>
-    <div className="wrapperA">
-      <div className="cardAU">
+    <div className="AUmain">
+      <div className="about-me">
         <img
           src={sury}
           alt="Suryansh smiling"
           className="profile-pic"
         />
-        <br></br>
-        <br></br>
+        <br></br><br/>
         <div className="info">
           <h2>Suryansh Singh</h2>
           <p>CEO, CTO, COO, CeverythingO <br></br><br></br>@ Eventsy Pvt. Ltd. <br></br>MalwaMill, Indore</p>
