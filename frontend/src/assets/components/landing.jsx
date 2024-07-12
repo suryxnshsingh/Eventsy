@@ -73,7 +73,6 @@ export function Landing() {
             <h3>Step 1</h3>
             <p>Create an account.</p>
           </div>
-          <MdNavigateNext className='next' />
 
           <div className="feature-card CSS" onClick={()=>{navigate('/events')}}>
             <FaCalendarCheck className="card-icon" />
