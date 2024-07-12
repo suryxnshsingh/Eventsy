@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
-import { FaPlusCircle } from "react-icons/fa";
 import './event.css';
 import { useNavigate } from 'react-router-dom';
+import { Grid } from 'react-loader-spinner';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
@@ -25,7 +25,18 @@ const EventList = () => {
     fetchEvents();
   }, []);
 
-  if (loading) return <div><h1>Loading...</h1></div>;
+  if (loading) return <div style={{ display : 'grid', placeItems : 'center', marginTop : '20%'}}>
+                        
+                        <Grid
+                          visible={true}
+                          height="100px"
+                          width="100px"
+                          color="#ff2c9c"
+                          ariaLabel="grid-loading"
+                          radius="12.5"
+                          wrapperStyle={{}}
+                          wrapperClass="grid-wrapper"
+                          /></div>;
 
   return (
     <div>

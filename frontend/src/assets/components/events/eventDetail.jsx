@@ -9,6 +9,7 @@ import { IoArrowBackCircle } from "react-icons/io5";
 import { FaUserPlus, FaUser, FaUserCheck } from "react-icons/fa";
 import { IoBookmark } from "react-icons/io5";
 import { MdEdit, MdDelete, MdBookmarkAdded } from "react-icons/md";
+import { Grid } from 'react-loader-spinner';
 
 const EventDetail = () => {
   const [event, setEvent] = useState(null);
@@ -37,7 +38,18 @@ const EventDetail = () => {
     fetchEvent();
   }, [eventId]);
 
-  if (loading) return <div><h1>Loading...</h1></div>;
+  if (loading) return <div style={{ display : 'grid', placeItems : 'center', marginTop : '20%'}}>
+                          
+                          <Grid
+                            visible={true}
+                            height="100px"
+                            width="100px"
+                            color="#ff2c9c"
+                            ariaLabel="grid-loading"
+                            radius="12.5"
+                            wrapperStyle={{}}
+                            wrapperClass="grid-wrapper"
+                            /></div>;
   if (error) return <div>{error}</div>;
 
   const handleDelete = async () => {
