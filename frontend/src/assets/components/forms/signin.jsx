@@ -5,15 +5,18 @@ import { FaKey } from "react-icons/fa";
 import axios from 'axios';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { DNA } from "react-loader-spinner";
 
 export function Signin(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
             try {
+                setLoading(true);
             const response = await axios.post('https://eventsy.onrender.com/auth/signin', {
                 email,
                 password,
@@ -25,10 +28,10 @@ export function Signin(){
             if (token) {
                 localStorage.setItem('token', token);
                 localStorage.setItem('uname', uname);
-                localStorage.setItem('mail', mail)
+                localStorage.setItem('mail', mail);
+                setLoading(false);
                 navigate('/events');
             }
-            //add shit here
             } catch (error) {
             console.error('Error logging in:', error);
         }
@@ -52,7 +55,14 @@ export function Signin(){
                 <a href="https://media1.tenor.com/m/e-un8UrwpfwAAAAd/bakchodi-mat-kar-laude-cid-meme.gif" target="_blank">Forgot Password</a>
             </div>
 
-            <button type="submit">Login</button>
+            <button type="submit">{loading ? <DNA
+                                                visible={true}
+                                                height="45"
+                                                width="50%"
+                                                ariaLabel="dna-loading"
+                                                wrapperStyle={{}}
+                                                wrapperClass="dna-wrapper"
+                                                /> : 'Login'}</button>
 
             <div className="register">
                 <p>Dont't have an account? <a onClick={()=>{navigate('/signup')}} className="link"><u>Register here!</u></a></p>

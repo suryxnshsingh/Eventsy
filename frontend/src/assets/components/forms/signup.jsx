@@ -5,16 +5,19 @@ import { MdEmail } from "react-icons/md";
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import { DNA } from "react-loader-spinner";
 
 export function Signup(){
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
             try {
+                setLoading(true);
             const response = await axios.post('https://eventsy.onrender.com/auth/signup', {
                 email,
                 username,
@@ -27,7 +30,8 @@ export function Signup(){
             if (token) {
                 localStorage.setItem('token', token);
                 localStorage.setItem('uname', uname);
-                localStorage.setItem('mail', mail)
+                localStorage.setItem('mail', mail);
+                setLoading(false);
                 navigate('/events');
             }
 
@@ -54,7 +58,14 @@ export function Signup(){
             </div>
             <br></br>
 
-            <button type="submit">Create Account</button>
+            <button type="submit">{loading ? <DNA
+                                                visible={true}
+                                                height="45"
+                                                width="50%"
+                                                ariaLabel="dna-loading"
+                                                wrapperStyle={{}}
+                                                wrapperClass="dna-wrapper"
+                                                /> : 'Create Account'}</button>
 
             <div className="register">
                 <p>Already have an account? <a onClick={()=>{navigate('/signin')}} className="link"><u>Login here!</u></a></p>
