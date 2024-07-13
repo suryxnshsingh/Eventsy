@@ -40,10 +40,13 @@ const Footer = () => {
                 </div>
             </div>
             <div className='suryansh'>
-             Made by <a className='sa' onClick={()=>{navigate('/aboutus')}}>  SURYANSH SINGH </a> • Connect with me on <a href="https://x.com/suryxnshsingh" target="_blank"><FaSquareXTwitter className='sit'/></a>
+             Made by <a className='sa' onClick={()=>{navigate('/aboutus')}}>  SURYANSH SINGH </a> • Connect with me on 
+             <div className='soc'>
+             <a href="https://x.com/suryxnshsingh" target="_blank"><FaSquareXTwitter className='sit'/></a>
              <a href="https://instagram.com/suryxnshsingh" target="_blank"><AiFillInstagram className='si'/></a>
              <a href="https://linkedin.com/in/suryxnshsingh" target="_blank"><FaLinkedin className='sil'/></a>
              <a href="https://github.com/suryxnshsingh" target="_blank"><FaGithub className='sig'/></a>
+             </div>
             </div>
         </footer>
     );

@@ -8,6 +8,10 @@
     .socials{
       display: none;
     }
+    .suryansh{
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
 .foot{
