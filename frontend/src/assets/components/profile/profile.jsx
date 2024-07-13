@@ -24,15 +24,13 @@ export function Profile() {
         <div className="profile-events">
           <h3>Registered Events</h3>
           <ul>
-            <li>Event 1</li>
-            <li>Event 2</li>
+            <li>none</li>
           </ul>
         </div>
         <div className="profile-events">
           <h3>Saved Events</h3>
           <ul>
-            <li>Event 1</li>
-            <li>Event 2</li>
+            <li>none</li>
           </ul>
         </div>
       </div>
