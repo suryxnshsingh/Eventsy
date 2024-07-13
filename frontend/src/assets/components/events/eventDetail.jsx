@@ -57,7 +57,7 @@ const EventDetail = () => {
       return alert('You need to be logged in to delete an event.');
     }
     try {
-      await axios.delete(`http://localhost:3000/events/${eventId}`, {
+      await axios.delete(`https://eventsy.onrender.com/events/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('Event deleted successfully');
