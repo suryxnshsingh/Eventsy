@@ -2,13 +2,6 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(30px);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 
   @media (max-width: 768px){
@@ -16,3 +9,38 @@
       display: none;
     }
   }
+
+.foot{
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  color: #fff;
+  padding-top: 1rem;
+  padding-inline: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.suryansh{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.sa{
+  margin-inline: 0.5rem;
+  color: white;
+}
+.si, .sil, .sit, .sig{
+  font-size: 1.5rem;
+  margin-inline: 0.5rem;
+  color: white;
+}
+.si:hover{
+  color: #ff2c9c;
+}
+.sil:hover{
+  color: #0077B5;
+}
+.sit:hover{
+  color: black;
+}

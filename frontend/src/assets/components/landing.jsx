@@ -113,7 +113,6 @@ export function Landing() {
                         <li><b>MongoDB:</b> A NoSQL database for storing event data and user information.</li>
                     </ul>
       </section>
-      <br></br>
     </div>
   );
 }

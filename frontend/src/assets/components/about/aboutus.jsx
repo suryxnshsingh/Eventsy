@@ -1,6 +1,7 @@
 import React from 'react';
 import './aboutus.css';
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import sury from './sury.png'
 
@@ -22,7 +23,7 @@ export function AboutUs() {
           <p>Connect here :</p>
           <div className="social-links">
             <a href="https://x.com/suryxnshsingh" target="_blank" rel="noopener noreferrer">
-              <FaTwitter />
+              <FaSquareXTwitter />
             </a>
             <a href="https://www.linkedin.com/in/suryxnshsingh/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
