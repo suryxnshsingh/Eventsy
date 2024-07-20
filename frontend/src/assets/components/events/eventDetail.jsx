@@ -73,13 +73,23 @@ const EventDetail = () => {
   };
 
   const handleRegister = () => {
-    //logic
-    setIsRegistered(prevState => !prevState);
+    if(!token){
+      navigate('/signup')
+    }
+    else{
+      //logic
+      setIsRegistered(prevState => !prevState);
+    }
   };
 
   const handleSave = () => {
+    if(!token){
+      navigate('/signup')
+    }
+    else{
     //logic
     setIsSaved(prevState => !prevState);
+    }
   };
 
   const AdminFeatures = () => {
