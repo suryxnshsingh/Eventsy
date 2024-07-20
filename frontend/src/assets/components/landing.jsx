@@ -66,26 +66,24 @@ export function Landing() {
       <br></br>
 
       <h1 className='Lh1'>How It Works</h1>
-      <section className="lan">
-        <div className="features-grid">
-          <div className="feature-card CSS" onClick={()=>{navigate('/signin')}}>
+      <section className="how">
+          <div className="feature-card-2 CSS" onClick={()=>{navigate('/signin')}}>
             <FaUserPlus className="card-icon" />
             <h3>Step 1</h3>
             <p>Create an account.</p>
           </div>
 
-          <div className="feature-card CSS" onClick={()=>{navigate('/events')}}>
+          <div className="feature-card-2 CSS" onClick={()=>{navigate('/events')}}>
             <FaCalendarCheck className="card-icon" />
             <h3>Step 2</h3>
             <p>Register your event.</p>
           </div>
 
-          <div className="feature-card CSS">
+          <div className="feature-card-2 CSS">
             <FaCoffee className="card-icon" />
             <h3>Step 3</h3>
             <p>Sit back and Relax</p>
           </div>
-        </div>
       </section>
       <br></br>
 

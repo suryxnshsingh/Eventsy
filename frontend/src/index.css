@@ -6,15 +6,27 @@
     box-sizing: border-box;
 }
 
-body {
+#root {
     font-family: 'Poppins', sans-serif;   
-
-    /* background: url('./assets/bg.png') no-repeat; */
      background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(2,37,78,1) 0%, 
     rgba(4,56,126,1) 19.7%, rgba(85,245,221,1) 100.2% );
+
+    /* background: url('./assets/bg.png') no-repeat; */
     /* background : rgba(4,56,126,1); */
 
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    padding-top: 5%;
+}
+
+@media (max-width: 768px){
+    #root{
+        padding-top: 15%;
+    }
+}
+
+body{
+    background: rgba(4,56,126,1);
+    
 }
