@@ -128,7 +128,7 @@ const EventDetail = () => {
         <p><BsCalendarDate className='iconD' />{event.date.split('T')[0]}</p>
         <p><AiOutlineDollarCircle className='iconD' />{event.entry}</p>
         <br></br>
-        <p>{event.description}</p>
+        <p style={{whiteSpace : 'pre-wrap'}}>{event.description}</p>
         <div style={{ display: 'flex' }}>
           <AdminFeatures />
         </div>
