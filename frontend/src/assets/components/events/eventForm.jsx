@@ -93,6 +93,7 @@ const EventForm = () => {
             onChange={(e) => setDescription(e.target.value)}
             required
           />
+          
         </div>
         <br></br>
         <div className="input-box">
