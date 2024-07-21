@@ -4,6 +4,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import './event.css';
 
 const EventForm = () => {
+  const [isMobile,setIsMobile] = useState(false)
+  useEffect(()=>{
+    if(window.innerWidth<768){
+      setIsMobile(true)
+      console.log("changed")
+    }else{setIsMobile(false);console.log("revert")}
+  },[window.innerWidth])
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [date, setDate] = useState('');
@@ -76,11 +83,12 @@ const EventForm = () => {
           />
         </div>
         <br></br>
-        <div className="input-boxF">
+        <div>
           <textarea
+            className="input-boxF"
             placeholder="Description"
             rows="10"
-            cols = '40'
+            cols = {isMobile?'40':'90'}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required

@@ -158,11 +158,16 @@
     position: relative;
     background: transparent;
     outline: none;
-    color : transparent;
+    color : white;
     padding: 20px;
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 25px;
 }
+
+.input-boxF::placeholder{
+    color: white;
+}
+
 
 .form{
     display: flex;
