@@ -122,3 +122,26 @@
 .landButton{
     color : #fff;
 }
+
+.button404{
+    align-self: center;
+    inset-block: 10% ;
+    margin-top: 5%;
+    padding-block: 0.5%;
+    padding-inline: 2%;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ff2c9c;
+    background-color: transparent;
+    border: solid;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    transition-duration: 0.4s;
+}
+.button404:hover {
+    background-color: #ff2c9c;
+    opacity: 01;
+    color: #fff;
+}

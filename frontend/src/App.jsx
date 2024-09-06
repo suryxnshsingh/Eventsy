@@ -12,6 +12,7 @@ import { WhyEventsy } from './assets/components/whyEventsy/whyEventsy'
 import EventList from './assets/components/events/eventList'
 import EventDetail from './assets/components/events/eventDetail'
 import EventForm from './assets/components/events/eventForm'
+import Page404 from './assets/components/Page404'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -34,6 +35,7 @@ function App() {
             <Route path = "/events/:id" element={<EventDetail />} />
             <Route path = "/form" element={<EventForm />} />
             <Route path = "/events/edit/:id" element={<EventForm />} />
+            <Route path = "/*" element={<Page404 />} /> 
           </Routes>
           </main>
         </BrowserRouter>
