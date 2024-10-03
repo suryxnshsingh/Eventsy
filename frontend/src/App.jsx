@@ -15,8 +15,6 @@ import EventForm from './assets/components/events/eventForm'
 import Page404 from './assets/components/Page404'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
       <AuthProvider>
